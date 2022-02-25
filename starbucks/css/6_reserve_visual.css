@@ -1,0 +1,54 @@
+.reserve-visual {
+    height: 400px;
+    background-color: rgb(195, 266, 236);
+}
+
+.reserve-visual .reserve-visual-background {
+    position: absolute;
+}
+
+.reserve-visual .reserve-visual-text {
+    padding-left: 400px;
+    padding-top: 100px;
+    z-index: 2;
+    position: absolute;
+}
+
+.reserve-visual .reserve-visual-btn-move {
+    padding-left: 660px;
+    padding-top: 280px;
+    z-index: 2;
+    
+}
+
+.reserve-visual .reserve-visual-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    line-height: 10px;
+    color: rgb(185, 129, 62);
+    border: 2px solid rgb(185, 129, 62);
+    background-color: transparent;
+}
+
+.reserve-visual .reserve-visual-btn:hover {
+    background-color: rgb(185, 129, 62);
+    color: white;
+    text-decoration: underline;
+}
+
+.reserve-visual .flash{
+    animation:flash 2s infinite;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+} 
+
+@keyframes flash{ 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 

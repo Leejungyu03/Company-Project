@@ -1,0 +1,14 @@
+header {height: 123px; 
+    background-color: rgb(246, 245, 239);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+header .logo-side {height: 123px;}
+header .navigation {height: 123px;}
+header .login-text {padding: 20px; color: black; }
+
+header .nav-text {padding: 15px; color: black;}
+header .nav-text:hover {background-color: rgba(0, 0, 0, 0.609);}

@@ -1,0 +1,13 @@
+#wrap {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+body {
+    padding-top: 123px;
+    /* 잘려진 부분 보이게 하기 */
+}
+
+.main-visual .absolute {
+    position: absolute;
+}
