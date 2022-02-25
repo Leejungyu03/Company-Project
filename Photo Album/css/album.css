@@ -1,0 +1,920 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    padding-top: 60px;
+}
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: white;
+    border-bottom: 0.5px solid gainsboro;
+    z-index: 4;
+}
+/* 인스타그램 로고 */
+header img{
+    width: 103px;
+    height: 29px;
+    position: relative;
+    top: 19px;
+    left: 485px;
+}
+/* 검색창 */
+header input[type=text] {
+    width: 270px;
+    height: 35px;
+    position: relative;
+    top: 12px;
+    left: 715px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 8px;
+    border: 1px solid rgb(239, 239, 239);
+}
+/* 로그인, 회원가입 버튼 */
+header .login {
+    width: 62px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    left: 913px;
+    padding: 10px;
+    line-height: 4px;
+    color: white;
+    background-color: rgb(0, 149, 246);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+header .signUp {
+    width: 56px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    left: 928px;
+    line-height: 28px;
+    color: rgb(0, 149, 246);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 프로필 */
+.profile {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+/* 프로필 사진 */
+.profile .profile-logo {
+    width: 30%;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 80px;
+    border-radius: 100%;
+    border: 3px solid white, 6px solid rgb(255, 0, 255) ;
+}
+
+/* 프로필 설명 */
+.profile .profile-explain {
+    width: 70%;
+}
+.profile .profile-explain .profile-text1 {
+    position: relative;
+    left: 45px;
+    font-size: 28px;
+    font-weight: 200;
+}
+.profile .profile-explain .profile-text1 .button{
+    width: 62px;
+    height: 30px;
+    position: relative;
+    bottom: 5px;
+    margin-left: 10px;
+    color: white;
+    background-color: rgb(0, 149, 246);
+    border-radius: 4px;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.profile .profile-explain .profile-text1 .button-cancel {
+    width: 90px;
+    height: 30px;
+    position: relative;
+    display: none;
+    bottom: 5px;
+    margin-left: 10px;
+    color: black;
+    background-color: none;
+    border-radius: 4px;
+    border: 1px solid grey;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* text - 2 */
+.profile .profile-explain .profile-text2 {
+    position: relative;
+    left: 45px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.profile .profile-explain .profile-text2 span{
+    margin-right: 60px;
+    font-size: 16px;
+}
+/* text - 3 */
+.profile .profile-explain .profile-text3{
+    position: relative;
+    left: 45px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.profile .profile-explain .profile-text3 span{
+    font-size: 16px;
+    font-weight: 500;
+}
+.profile .profile-explain .profile-text3 a{
+    color: rgb(0, 55, 107);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 스토리 */
+.story {
+    position: relative;
+    width: 930px;
+    height: 140px;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.story .story-line {
+    /* width는 story,js에서 지정 */
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease-out;
+}
+.story .story-line li {
+    margin-left: 55px;
+    list-style: none;
+}
+.story .story-line li:not(last-child) {
+    float: left;
+}
+.story .story-line li img {
+    width: 77px;
+    height: 77px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+/* 스토리 자동차 제외*/
+.story .story-line .story-cake .text-cake, .text-beach, .text-trip, .text-dog, .text-cat, .text-meat, .text-fruit, .text-dress {
+    padding-top: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+/* 스토리 자동차 */
+.story .story-line .story-car  {
+    padding-top: 5px;
+    font-size: 24px;
+    text-align: center;
+}
+/* 버튼 */
+.story .btns {
+	width: 25px;
+	height: 25px;
+    position: relative;
+    text-align: center;
+    color: white;
+	background:rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 100%;
+	z-index: 3;
+    cursor:pointer;
+}
+/* next 버튼 */
+.story #next {
+    top: 20px;
+    float: right;
+    opacity: 0.7;
+}
+/* prev 버튼 */
+.story #prev { 
+    top: 45px;
+    opacity: 0;
+}
+
+/* 스토리 창 */
+section .story-popup {
+    width: 500px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+    transition: all 1.5s;
+}
+/* 스토리 창 고정 */
+section .story-popup {
+    position: fixed;
+}
+/* 뒷배경 */
+.story-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    visibility: hidden;
+}
+/* 스토리 팝업 내 이미지 */
+section .story-popup .main-img img {
+    width: 500px;
+    height: 450px;
+    position: relative;
+    top: 70px;
+}
+/* 스토리 팝업 닫기 */
+section .story-popup .story-popup-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* 스토리 팝업 내 진행바 */
+section .story-popup .progress-bar {
+    width: 500px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+section .story-popup .progress-bar .progress {
+    width: 20%;
+    height: 7px;
+    line-height: 7px;
+    background-color: azure;
+    transition: all 3.3s;
+}
+
+/* 스토리 팝업 내 버튼 */
+section .story-popup .story-popup-prev {
+    position: absolute;
+    left: 55px;
+    bottom: 40px;
+    cursor: pointer;
+}
+section .story-popup .story-popup-next {
+    position: absolute;
+    right: 55px;
+    bottom: 40px;
+    cursor: pointer;
+}
+section .story-popup .story-popup-prev img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+section .story-popup .story-popup-next img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/* 네비게이션 바 */
+.navBar {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    border-top: 1px solid gainsboro;
+}
+.navBar .bar{
+    padding-left: 100px;
+}
+.navBar .post, .reels, .video {
+    width: 57px;
+    height: 52px;
+    margin-right: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: gainsboro;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.navBar img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 470px;
+    right: 490px;
+    border-radius: 100%;
+    transition: all 1s;
+    cursor: pointer;
+}
+.navBar img:hover {
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+.navBar #chooseFile {
+    visibility: hidden;
+}
+
+/* 게시물 */
+.pictures {
+ width: 100%;
+ height: 100%;   
+}
+.pictures .all {
+    width: 100%;
+}
+/* 앨범 텍스트 */
+.pictures .all .text {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #D1D1D1;
+    border-radius: 10px;
+}
+/* 앨범 제목 */
+.pictures .all .text .album-title {
+    margin-left: 60px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+/* 앨범 태그 */
+.pictures .all .text .album-tag {
+    color: white;
+    font-size: 17px;
+    display: block;
+}
+/* 앨범 설명 */
+.pictures .all .text .album-explain {
+    position: relative;
+    bottom: 20px;
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+/* 삭제 버튼 */
+.pictures .all .text .album-delete {
+    width: 70px;
+    height: 30px;
+    position: relative;
+    float: right;
+    line-height: 10px;
+	color:#ffffff;
+	background-color:#e4685d;
+	border-radius:4px;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	text-shadow:0px 1px 0px #b23e35;
+	font-size:15px;
+	text-decoration:none;
+	font-family:Arial;
+	cursor:pointer;
+}
+.pictures .all .text .album-delete:hover {
+	background-color:#eb675e;
+}
+/* 삭제 버튼 눌렀을 때 움직임 */
+.pictures .all .text .album-delete:active {
+	position:relative;
+	top:1px;
+}
+/* 보여지는 앨범 */
+.pictures .all .album {
+    width: 950px;
+    height: 240px;
+    display: none;
+    overflow: hidden;
+}
+/* 앨범 넘기는 곳 */
+.pictures .all .album .album-img {
+    width: 2800px;
+    position: relative;
+    top: 0;
+    left: 310px;
+    transition: 1s;
+}
+/* 앨범 내 이미지 */
+.pictures .all .album .album-img img {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    top: 0px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    transition: 1s;
+}
+/* 이전버튼 */
+.pictures .all .album .album-prev {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    right: 29px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+/* 다음 버튼 */
+.pictures .all .album .album-next {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    left: 925px;
+    line-height: 18px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* 게시물 */
+.pictures {
+ width: 100%;
+ height: 100%;   
+}
+.pictures .all {
+    width: 100%;
+}
+/* 앨범 텍스트 */
+.pictures .all .text {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #D1D1D1;
+    border-radius: 10px;
+}
+/* 앨범 제목 */
+.pictures .all .text .album-title {
+    margin-left: 60px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+/* 앨범 태그 */
+.pictures .all .text .album-tag {
+    color: white;
+    font-size: 17px;
+    display: block;
+}
+/* 앨범 설명 */
+.pictures .all .text .album-explain {
+    position: relative;
+    bottom: 20px;
+    color: white;
+    font-size: 18px;
+    display: none;
+}
+/* 삭제 버튼 */
+.pictures .all .text .album-delete {
+    width: 70px;
+    height: 30px;
+    position: relative;
+    float: right;
+    line-height: 10px;
+	color:#ffffff;
+	background-color:#e4685d;
+	border-radius:4px;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	text-shadow:0px 1px 0px #b23e35;
+	font-size:15px;
+	text-decoration:none;
+	font-family:Arial;
+	cursor:pointer;
+}
+.pictures .all .text .album-delete:hover {
+	background-color:#eb675e;
+}
+/* 삭제 버튼 눌렀을 때 움직임 */
+.pictures .all .text .album-delete:active {
+	position:relative;
+	top:1px;
+}
+/* 보여지는 앨범 */
+.pictures .all .album {
+    width: 950px;
+    height: 240px;
+    display: none;
+    overflow: hidden;
+}
+/* 앨범 넘기는 곳 */
+.pictures .all .album .album-img {
+    width: 2800px;
+    position: relative;
+    top: 0;
+    left: 310px;
+    transition: 1s;
+}
+/* 앨범 내 이미지 */
+.pictures .all .album .album-img img {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    top: 0px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    transition: 1s;
+}
+/* 이전버튼 */
+.pictures .all .album .album-prev {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    right: 29px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+/* 다음 버튼 */
+.pictures .all .album .album-next {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    left: 925px;
+    line-height: 18px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+/* 게시물 */
+.pictures {
+    width: 100%;
+    height: 100%;   
+}
+.pictures .all {
+       width: 100%;
+}
+/* 앨범 텍스트 */
+.pictures .all .text {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #D1D1D1;
+    border-radius: 10px;
+}
+/* 앨범 제목 */
+.pictures .all .text .album-title {
+    margin-left: 60px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: black;
+    font-size: 26px;
+}
+/* 앨범 태그 */
+.pictures .all .text .album-tag {
+    color: black;
+    font-size: 17px;
+    display: block;
+}
+/* 앨범 설명 */
+.pictures .all .text .album-explain {
+    position: relative;
+    top: 10px;
+    color: black;
+    font-size: 18px;
+    display: none;
+}
+/* 삭제 버튼 */
+.pictures .all .text .album-delete {
+    width: 70px;
+    height: 30px;
+    position: relative;
+    float: right;
+    line-height: 10px;
+    color:#ffffff;
+    background-color:#e4685d;
+    border-radius:4px;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+    text-shadow:0px 1px 0px #b23e35;
+    font-size:15px;
+    text-decoration:none;
+    font-family:Arial;
+    cursor:pointer;
+}
+.pictures .all .text .album-delete:hover {
+    background-color:#eb675e;
+}
+/* 삭제 버튼 눌렀을 때 움직임 */
+.pictures .all .text .album-delete:active {
+    position:relative;
+    top:1px;
+}
+/* 보여지는 앨범 */
+.pictures .all .album {
+       width: 950px;
+       height: 240px;
+       display: none;
+       overflow: hidden;
+}
+/* 앨범 넘기는 곳 */
+.pictures .all .album .album-img {
+       width: 2800px;
+       position: relative;
+       top: 0;
+       left: 310px;
+       transition: 1s;
+}
+/* 앨범 내 이미지 */
+.pictures .all .album .album-img img {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    top: 0px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    transition: 1s;
+}
+/* 이전버튼 */
+.pictures .all .album .album-prev {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    right: 29px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+   }
+/* 다음 버튼 */
+.pictures .all .album .album-next {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 95px;
+    left: 925px;
+    line-height: 18px;
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* 새 게시물 만들기 창 */
+.pictures-popup {
+    width: 800px;
+    height: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.5s;
+    z-index: 10;
+    overflow: hidden;
+}
+.pictures-popup {
+    position: fixed;
+}
+/* 게시물 사진 메뉴 */
+.pictures-popup .post-menu {
+    width: 1600px;
+    height: 50px;
+    position: relative;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: all 1s;
+}
+/* 파일 선택 버튼 */
+.pictures-popup .post-menu .menu-imgs {
+    width: 50%;
+}
+.pictures-popup .post-menu .menu-imgs .fileBtn {
+    width: 90px;
+    height: 35px;
+    position: relative;
+    top: 8px;
+    left: 50px;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(30, 22, 54, 0.6);
+    border-radius: 20px;
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+    font-size: 16px;
+}
+.pictures-popup .post-menu .menu-imgs .fileBtn:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+/* 원래 input file 모양 숨기기 */
+.pictures-popup .post-menu .menu-imgs input[type='file'] {
+    visibility: hidden;
+}
+/* 업로드 버튼 */
+.pictures-popup .post-menu .menu-imgs .uploadBtn {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    right: 220px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.pictures-popup .post-menu .menu-imgs .uploadBtn:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+/* <새 게시물 만들기> 텍스트 */
+.pictures-popup .post-menu .menu-imgs span {
+    position: relative;
+    top: 10px;
+    right: 110px;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* next 버튼 */
+.pictures-popup .post-menu .menu-imgs .post-next img{
+    width: 50px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 130px; 
+    cursor: pointer;
+    transition: all 1s;
+}
+.pictures-popup .post-menu .menu-imgs .post-next img:hover{
+    left: 160px; 
+}
+/* 게시물 사진 */
+.pictures-popup .post-make {
+    width: 1600px;
+    height: 850px;
+    position: relative;
+    right: 0px;
+    background-color: white;
+    transition: all 1s;
+}
+.pictures-popup .post-make .post-imgs{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+.pictures-popup .post-make .post-imgs img {
+    width: 45%;
+    height: 200px;
+    margin: 10px 0 0 25px;
+    border-radius: 16px;
+}
+/* 게시물 내용 메뉴 */
+.pictures-popup .post-menu .menu-text {
+    width: 50%;
+}
+/* 이전 화살표 */
+.pictures-popup .post-menu .menu-text .post-prev img {
+    width: 50px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 40px; 
+    transition: all 1s;
+    cursor: pointer;
+}
+.pictures-popup .post-menu .menu-text .post-prev img:hover{
+    left: 10px; 
+}
+/* <새 게시물 만들기> 텍스트 */
+.pictures-popup .post-menu .menu-text span{
+    position: relative;
+    top: 10px;
+    left: 280px;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* 완료 버튼 */
+.pictures-popup .post-menu .menu-text .post-create {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    left: 540px;
+    line-height: 30px;
+    text-align: center;
+	color:#ffffff;
+	background-color:#33bdef;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	border-radius:6px;
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+	text-shadow:0px -1px 0px #5b6178;
+	font-size:16px;
+	font-weight: bold;
+	cursor:pointer;
+    
+}
+.pictures-popup .post-menu .menu-text .post-create:hover {
+	background-color:#019ad2;
+    background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+}
+/* 게시물 내용 */
+.pictures-popup .post-make .post-text {
+    width: 50%;
+    height: 100%;
+}
+.pictures-popup .post-make .post-text h2{
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+.pictures-popup .post-make .post-text .title {
+    width: 600px;
+    height: 100%;
+    margin-bottom: 40px;
+    margin-left: 90px;
+    background-color: azure;
+}
+.pictures-popup .post-make .post-text .explain {
+    width: 700px;
+    height: 200px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+.pictures-popup .post-make .post-text .tag {
+    width: 400px;
+    height: 100%;
+    margin-bottom: 40px;
+    margin-left: 200px;
+    background-color: azure;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+    margin-top: 400px;
+    color: grey;
+}
+footer .menu {
+    justify-content: center;
+    font-size: 13px;
+}
+footer .menu div {
+    margin-right: 15px;
+}
+footer .copyright {
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 11px;
+}
+footer .copyright div {
+    margin-right: 15px;
+}

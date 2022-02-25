@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoAlbum</title>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/album.css">
+</head>
+<body>
+    <!-- 헤드 -->
+    <header class="d-flex">
+        <img src="images/header/logo.png" alt="인스타그램 로고">
+        <input type="text" class="form-control" placeholder="🔍 검색">
+        <button class="login btn ">로그인</button>
+        <a href="#" class="signUp">가입하기</a>
+    </header>
+    <div id="wrap">
+        <!-- 프로필 -->
+        <section class="profile d-flex">
+            <div class="profile-logo"><img src="images/profile/profile_picture.jpg" alt="프로필 사진"></div>
+            <div class="profile-explain">
+                <div class="profile-text1">
+                    Robert_02
+                    <button class="button">팔로우</button>
+                    <button class="button-cancel">팔로우 취소</button>
+                </div>
+                <div class="profile-text2">
+                    <span>게시물 10</span>
+                    <span id="follower">팔로워 0</span>
+                    <span>팔로우 0</span>
+                </div>
+                <div class="profile-text3">
+                    <span>Robert</span>
+                    <br>
+                    <a href="#">youtube.com/Robert</a>
+                </div>
+            </div>      
+        </section>
+        <!-- 스토리 -->
+        <section class="story">
+            <ul class="story-line">
+                <li class="story-cake">
+                    <img src="images/cake/cake1.jpg" alt="케익크">
+                    <div class="text-cake">🍰</div>
+                </li>
+                <li class="story-beach">
+                    <img src="images/beach/beach1.jpg" alt="해변">
+                    <div class="text-beach">⛱</div>
+                </li>
+    
+                <li class="story-car">
+                    <img src="images/car/car1.jpg" alt="자동차">
+                    <div class="text-car">🚗</div>
+                </li>
+                <li class="story-trip">
+                    <img src="images/trip/trip1.jpg" alt="여행">
+                    <div class="text-trip">✈</div>
+                </li>
+                <li class="story-dog">
+                    <img src="images/dog/dog1.jpg" alt="강아지">
+                    <div class="text-dog">🐶</div>
+                </li>
+                <li class="story-cat">
+                    <img src="images/cat/cat1.jpg" alt="고양이">
+                    <div class="text-cat">😺</div>
+                </li>
+                <li class="story-meat">
+                    <img src="images/meat/meat1.jpg" alt="고기">
+                    <div class="text-meat">🍖</div>
+                </li>
+                <li class="story-fruit">
+                    <img src="images/fruit/fruit1.jpg" alt="과일">
+                    <div class="text-fruit">🍎</div>
+                </li>
+                <li class="story-dress">
+                    <img src="images/dress/dress1.jpg" alt="옷">
+                    <div class="text-dress">🥼</div>
+                </li>
+            </ul>
+            <div id="prev" class="btns">◁</div>
+            <div id="next" class="btns">▷</div>
+            <!-- 스토리 창 -->
+            <div class="story-popup">
+                <div class="main-img">
+                    <img src="" alt="">
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="story-popup-close">X</div>
+                <div class="story-popup-prev"><img src="images/story_popup/prev.png" alt="이전 버튼"></div>
+                <div class="story-popup-next"><img src="images/story_popup/next.png" alt="다음 버튼"></div>
+            </div>
+        </section>
+        <!--창 가림 -->
+        <div class="story-bg"></div>
+        <!-- 안내 바 -->
+        <section class="navBar d-flex">
+            <div class="bar d-flex">
+                <div class="post">게시물</div>
+                <div class="reels">릴스</div>
+                <div class="video">동영상</div>
+            </div>
+            <img src="images/navBar/add.png" class="pictures-popup-open">
+        </section>
+        <!-- 게시물 만들기 창  -->
+        <div class="pictures-popup">
+            <div class="post-menu d-flex">
+                <div class="menu-imgs d-flex">
+                    <div class="fileBtn">
+                    <label for="file">
+                        파일 선택
+                    </label>
+                    </div>
+                    <input type="file" id="file" multiple>
+                    <div class="uploadBtn">업로드</div>
+                    <span>새 게시물 만들기</span>
+                    <div class="post-next"><img src="images/pictures_popup/next.png" alt=""></div>
+                </div>
+                <div class="menu-text d-flex">
+                    <div class="post-prev"><img src="images/pictures_popup/prev.png" alt=""></div>
+                    <span>새 게시물 만들기</span>
+                    <div class="post-create">완료</div>
+                </div>
+            </div>
+            <div class="post-make d-flex">
+                <div class="post-imgs" id="imgs">
+                </div>
+                <div class="post-text">
+                    <div>
+                        <h2>제목</h2>
+                        <input type="text" class="title form-control">
+                    </div>
+                    <div>
+                        <h2>설명</h2>
+                        <textarea class="explain" placeholder="100자 제한"></textarea>
+                    </div>
+                    <div>
+                        <h2>태그</h2>
+                        <input type="text" class="tag form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="pictures">
+        </section>
+    </div>
+    <footer>
+        <div class="menu d-flex">
+            <div>Meta</div>
+            <div>소개</div>
+            <div>채용 정보</div>
+            <div>도움말</div>
+            <div>API</div>
+            <div>개인정보처리방침</div>
+            <div>약관</div>
+            <div>인기 계정</div>
+            <div>해시태그</div>
+            <div>위치</div>
+            <div>Instagram Lite</div>
+        </div>
+        <div class="copyright d-flex">
+            <div>한국어</div>
+            <div>© 2022 Instagram from Meta</div>
+        </div>
+    </footer>
+    
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="js/story.js"></script>
+    <script src="js/storyPopup.js"></script>
+    <script src="js/navBar.js"></script>
+    <script src="js/pictures.js"></script>
+    <script src="js/album.js"></script>
+</body>
+</html>

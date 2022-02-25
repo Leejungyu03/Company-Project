@@ -1,0 +1,65 @@
+section {
+    border: 5px solid hsl(29, 100%, 64%);
+    margin: 0;
+    border-top: 0px;
+    position: relative;
+}
+section .list-box {
+    height: 100%;
+}
+section .list-box .list {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    border-bottom: 1px solid #D1D1D1;
+    display: flex;
+}
+section .list-box .list:first-child {
+    border-top: 10px solid #FF9F45;
+}
+section .list-box .list .image-position {
+    width: 30%;
+    height: 100%;
+}
+section .list-box .list .image-position img {
+    width: 160px;
+    max-height: 140px;
+    position: relative;
+    left: 25%;
+    top: 5px;
+}
+section .list-box .list .text-position {
+    width: 70%;
+    height: 100%;
+}
+section .list-box .list .text-position .title {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+section .list-box .list .text-position .position {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 17px;
+    font-weight: 300;
+}
+section .list-box .list .text-position .price {
+    margin-top: 3px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+section .list-box .list .text-position .content {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+section .list-box .list .text-position .userName {
+    text-align: end;
+    margin-left: 500px;
+    font-size: 15px;
+    font-weight: 300;
+    color: grey;
+}
