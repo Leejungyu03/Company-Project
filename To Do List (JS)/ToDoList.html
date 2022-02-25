@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/datepicker.js"></script>
+    
+    <!-- datephicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1>To Do List</h1>
+            <div class="d-flex">
+                <div>
+                    <button type="button" class="addBtn" id="add">A d d</button>
+                </div>
+            </div>
+        </header>
+        <section class="d-flex">
+            <div class="popup">
+                <div class="popup-input">
+                    <div class="popup-title d-flex">
+                        <span class="main-text">Title</span>
+                        <input type="text" class="title-text form-control">
+                    </div>
+                    <span class="title-warning">❌Please enter the title</span>
+                    <div class="popup-start d-flex">
+                        <span class="main-text">Start Date</span> 
+                        <input type="text" class="start-text form-control">
+                    </div>
+                    <div class="popup-end d-flex">
+                        <span class="main-text">End Date</span> 
+                        <input type="text" class="end-text form-control">
+                    </div>
+                    <br>
+                    <div class="popup-progress">
+                        <span class="progress-span">Progress</span>
+                        <div class="progress-radioBtn">
+                            <label><input type='radio' class="radioBtn" name="progress" value="waiting" checked><span class="main-text">대기</span></label>
+                            <label><input type='radio' class="radioBtn" name="progress" value="ongoing"><span class="main-text">진행중</span></label>
+                            <label><input type='radio' class="radioBtn" name="progress" value="complete"><span class="main-text">완료</span></label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-save" id="save">Save</button>
+                <button class="btn btn-close" id="close">close</button>
+            </div>
+            <div class="popup2">
+                <h1>Modify the List </h1>
+                <div class="popup-input">
+                    <div class="popup-title d-flex">
+                        <span class="main-text">Title</span>
+                        <input type="text" class="title-text2 form-control">
+                    </div>
+                    <span class="title-warning">❌Please enter the title</span>
+                    <div class="popup-start d-flex">
+                        <span class="main-text">Start Date</span> 
+                        <input type="text" class="start-text2 form-control">
+                    </div>
+                    <div class="popup-end d-flex">
+                        <span class="main-text">End Date</span> 
+                        <input type="text" class="end-text2 form-control">
+                    </div>
+                </div>
+                <button class="btn btn-save" id="save2">Save</button>
+                <button class="btn btn-close" id="cancel2">cancel</button>
+            </div>
+            <div class="head">
+                <div class="d-flex">
+                    <div class="sequence-head">순서</div>
+                    <div class="title-head">제목</div>
+                    <div class="day-head">시작일 ~ 종료일</div>
+                    <div class="situation-head">진행상황</div>
+                    <div class="manage-head">관리</div>
+                </div>
+                
+                <ol id="ol">
+                </ol>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

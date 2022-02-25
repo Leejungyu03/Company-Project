@@ -1,0 +1,115 @@
+section {
+    width: 1500px;
+    height: 750px;
+    text-align: center;
+}
+
+.head {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+}
+
+.sequence-head {
+    width: 10%;
+    height: 50px;
+}
+
+.title-head {
+    width: 30%;
+    height: 50px;
+}
+
+.day-head {
+    width: 20%;
+    height: 50px;
+}
+
+.situation-head {
+    width: 25%;
+    height: 50px;
+}
+
+.manage-head {
+    width: 15%;
+    height: 50px;
+}
+
+/* ol */
+ol {
+    margin: 0;
+    padding: 0;
+}
+ol .sequence{
+    width: 100%;
+    height: 45px;
+}
+ol .waiting-text{
+    color: rgb(255, 193, 7);
+}
+ol .ongoing-text{
+    color: rgb(220, 53, 69);
+}
+ol .complete-text{
+    color: rgb(40, 167, 69);
+    text-decoration: line-through double black;
+}
+/* 왼쪽 (순서, 제목, 시작일 ~ 종료일 */
+ol .div-left {
+    margin-left: 24.57px;
+    width: 900px;
+    height: 45px;
+}
+
+ol .div-left .title{
+    width: 450px;
+    height: 45px;
+}
+ol .div-left .day{
+    width: 300px;
+    height: 45px;
+}
+
+/* 오른쪽 (진행상황, 관리) */
+ol .div-right {
+    width: 600px;
+    height: 45px;
+}
+
+ol .div-right .situation{
+    width: 375px;
+    height: 45px;
+}
+ol .div-right .manage{
+    width: 225px;
+    height: 45px;
+}
+/* 오른쪽 모든 버튼 */
+ol .div-right .btn {
+    margin:  0 10px 0 10px;
+    width: 80px;
+    height: 30px;
+    line-height: 10px;
+}
+/* 관리 버튼 */
+ol .div-right .manage .btn {
+    border: 1px solid black
+
+}
+
+ol .div-right .situation .btn {
+    color: white;
+    border: none;
+}
+
+
+li{
+    counter-increment: list;
+}
+li::before{
+    width: 150px;
+    height: 45px;
+    content: counter(list);
+}

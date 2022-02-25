@@ -1,0 +1,283 @@
+/* popup1 */
+section .popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    box-shadow: right;
+    padding: 20px;
+    box-sizing: border-box;
+    translate: all 0.5s;
+    background-image: url(../images/note.png);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    font-family: fantasy;
+}
+section .popup {
+    position: fixed;
+}
+
+section .popup .popup-input {
+    width: 600px;
+    left: 50px;
+    top: 70px;
+    
+}
+
+/* TITLE */
+section .popup .popup-input .popup-title {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 120px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup .popup-input .popup-title .main-text {
+    position: absolute;
+}
+section .popup .popup-input .popup-title .title-text {
+    width: 400px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+section .popup .popup-input .title-warning {
+    position: absolute;
+    top: 160px;
+    left: 260px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+
+
+/* START DATE */
+section .popup .popup-input .popup-start {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 190px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup .popup-input .popup-start span {
+    position: absolute;
+}
+section .popup .popup-input .popup-start .start-text {
+    width: 250px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+
+/* END DATE */
+section .popup .popup-input .popup-end {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 260px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup .popup-input .popup-end span {
+    position: absolute;
+}
+section .popup .popup-input .popup-end .end-text {
+    width: 250px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+
+/* PROGRESS */
+section .popup .popup-input .popup-progress {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 300px;
+    left: 120px;
+}
+section .popup .popup-input .popup-progress .progress-span {
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+}
+section .popup .popup-input .popup-progress .progress-radioBtn {
+    position: absolute;
+    top: 13px;
+    left: 140px;
+}
+section .popup .popup-input .popup-progress .progress-radioBtn label{
+    margin-right: 20px;
+}
+section .popup .popup-input .popup-progress .progress-radioBtn label span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.progress-radioBtn input.radioBtn{
+    font-size: 1em;
+    width: 1.125em;
+    height: 1.125em;
+    vertical-align: middle;
+}
+.progress-radioBtn input.radioBtn + label{ 
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+/* CLOST BUTTON */
+section .popup .btn-close {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 45px;
+    background-color: tomato;
+}
+
+/* SAVE BUTTON */
+section .popup .btn-save {
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 45px;
+    background-color: cornflowerblue;
+}
+
+
+/* ======================================================================= */
+
+
+
+
+/* popup2 */
+section .popup2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    box-shadow: right;
+    padding: 20px;
+    box-sizing: border-box;
+    translate: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    font-family: fantasy;
+    background-image: url(../images/modify_note.png);
+}
+section .popup2 {
+    position: fixed;
+}
+section .popup2 .popup-input {
+    width: 600px;
+    left: 50px;
+    top: 70px;
+    
+}
+
+/* TITLE */
+section .popup2 .popup-input .popup-title {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 120px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup2 .popup-input .popup-title .main-text {
+    position: absolute;
+}
+section .popup2 .popup-input .popup-title .title-text2 {
+    width: 400px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+section .popup2 .popup-input .title-warning {
+    position: absolute;
+    top: 160px;
+    left: 260px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+
+
+/* START DATE */
+section .popup2 .popup-input .popup-start {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 190px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup2 .popup-input .popup-start span {
+    position: absolute;
+}
+section .popup2 .popup-input .popup-start .start-text2 {
+    width: 250px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+
+
+/* END DATE */
+section .popup2 .popup-input .popup-end {
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    top: 260px;
+    left: 120px;
+    font-size: 30px;
+}
+section .popup2 .popup-input .popup-end span {
+    position: absolute;
+}
+section .popup2 .popup-input .popup-end .end-text2 {
+    width: 250px;
+    height: 40px;
+    margin-left: 140px;
+    font-size: 20px;
+}
+
+/* CLOST BUTTON */
+section .popup2 .btn-close {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 45px;
+    background-color: tomato;
+}
+
+/* SAVE BUTTON */
+section .popup2 .btn-save {
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 45px;
+    background-color: cornflowerblue;
+}
