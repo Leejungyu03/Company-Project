@@ -8896,14 +8896,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $ea7ac3 = exports.default || module.exports;
+        var $209b7c = exports.default || module.exports;
       
-      if (typeof $ea7ac3 === 'function') {
-        $ea7ac3 = $ea7ac3.options;
+      if (typeof $209b7c === 'function') {
+        $209b7c = $209b7c.options;
       }
     
         /* template */
-        Object.assign($ea7ac3, (function () {
+        Object.assign($209b7c, (function () {
           var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -8969,9 +8969,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$ea7ac3', $ea7ac3);
+            api.createRecord('$209b7c', $209b7c);
           } else {
-            api.reload('$ea7ac3', $ea7ac3);
+            api.reload('$209b7c', $209b7c);
           }
         }
 
@@ -9082,14 +9082,14 @@ var _default = {
   methods: {}
 };
 exports.default = _default;
-        var $f5e4d3 = exports.default || module.exports;
+        var $7d8147 = exports.default || module.exports;
       
-      if (typeof $f5e4d3 === 'function') {
-        $f5e4d3 = $f5e4d3.options;
+      if (typeof $7d8147 === 'function') {
+        $7d8147 = $7d8147.options;
       }
     
         /* template */
-        Object.assign($f5e4d3, (function () {
+        Object.assign($7d8147, (function () {
           var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -9149,9 +9149,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$f5e4d3', $f5e4d3);
+            api.createRecord('$7d8147', $7d8147);
           } else {
-            api.reload('$f5e4d3', $f5e4d3);
+            api.reload('$7d8147', $7d8147);
           }
         }
 
@@ -9255,14 +9255,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $27bf77 = exports.default || module.exports;
+        var $1de0ba = exports.default || module.exports;
       
-      if (typeof $27bf77 === 'function') {
-        $27bf77 = $27bf77.options;
+      if (typeof $1de0ba === 'function') {
+        $1de0ba = $1de0ba.options;
       }
     
         /* template */
-        Object.assign($27bf77, (function () {
+        Object.assign($1de0ba, (function () {
           var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -9384,9 +9384,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$27bf77', $27bf77);
+            api.createRecord('$1de0ba', $1de0ba);
           } else {
-            api.reload('$27bf77', $27bf77);
+            api.reload('$1de0ba', $1de0ba);
           }
         }
 
@@ -9444,14 +9444,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $599aee = exports.default || module.exports;
+        var $77d95e = exports.default || module.exports;
       
-      if (typeof $599aee === 'function') {
-        $599aee = $599aee.options;
+      if (typeof $77d95e === 'function') {
+        $77d95e = $77d95e.options;
       }
     
         /* template */
-        Object.assign($599aee, (function () {
+        Object.assign($77d95e, (function () {
           var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -9508,9 +9508,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$599aee', $599aee);
+            api.createRecord('$77d95e', $77d95e);
           } else {
-            api.reload('$599aee', $599aee);
+            api.reload('$77d95e', $77d95e);
           }
         }
 
@@ -9545,7 +9545,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55657" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57166" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
