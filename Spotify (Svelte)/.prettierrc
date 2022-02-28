@@ -1,0 +1,11 @@
+{
+    "svelteSortOrder": "scripts-styles-markup",
+    "svelteStrictMode": true,
+    "svelteBracketNewLine": true,
+    "svelteAllowShorthand": false,
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "editor.formatOnSave": true
+}
