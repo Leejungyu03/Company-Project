@@ -39,6 +39,9 @@
         margin-top: 40px;
         margin-right: 30px;
     }
+    section .contents .download-image img {
+        cursor: pointer;
+    }
     section .contents p {
         width: 70%;
         margin-left: 140px;

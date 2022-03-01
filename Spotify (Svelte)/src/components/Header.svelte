@@ -1,19 +1,40 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
 
+    const dispatch = createEventDispatcher();
+
+    let onScreen = '';
+
+    function main () {
+        onScreen = 1;
+    }
+    function login() {
+        onScreen = 2;
+    }
+    function register () {
+        onScreen = 3;
+    }
+
+
+    $: (() => {
+        dispatch('HeaderProps', {
+            onScreen
+        })
+    })();
 </script>
 <header>
     <div class="head">
         <div class="image">
-            <img src='../images/Logo.png' alt="로고">
+            <img src='../images/Logo.png' alt="로고" on:click={main}>
         </div>
         <nav>
             <ul>
                 <li>프리미엄</li>
                 <li>지원</li>
                 <li>다운로드하기</li>
-                <li>|</li>
-                <li>가입하기</li>
-                <li>로그인하기</li>
+                <li class="line">|</li>
+                <li on:click={login}>가입하기</li>
+                <li on:click={register}>로그인하기</li>
             </ul>
         </nav>
     </div>
@@ -58,7 +79,7 @@
     header .head nav ul li:last-child {
         margin-right: 20px;
     }
-    header .head nav ul li:hover {
+    header .head nav ul li:hover:not(.line) {
         color: green;
         cursor: pointer;
     }
