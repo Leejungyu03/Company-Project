@@ -1,12 +1,11 @@
 var data = [
     {
-        id : 'l1j1g5',
-        pw : 'ljg20031104',
+        email : 'admin',
+        pw : 'admin',
+        userName : 'admin',
+        birth : '0000-00-00',
+        gender : 'none',
     },
-    {
-        id : 'l1j1g6',
-        pw : 'ljg20031104@',
-    }
 ]
 
 export default data;
