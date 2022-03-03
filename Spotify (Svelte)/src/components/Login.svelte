@@ -1,25 +1,30 @@
 <script>
     import database from "../database";
+    import { createEventDispatcher } from 'svelte';
 
+    
     let data = database;
+    const dispatch = createEventDispatcher();
+    let onScreen = '';
 
     function login() { 
         let email = document.getElementById('emailCheck').value;
         let password = document.getElementById('passwordCheck').value;
         console.log(data)
         let cc = false;
+        let dd = false;
         cc = emailCheck();
+        dd = passwordCheck();
         if (cc) {
-            alert("성공")
+            if (dd) {
+                login();
+            } else {
+                alert("비밀번호가 틀립니다.");
+            }
+        } else {
+            alert("등록된 이메일이 없습니다.");
         }
-        // for (var i = 0; i < data.length; i++) {
-        //     if (data[i].email == email) {
-            //         if (data[i].pw == password) {
-                //             alert("성공");
-                //             break;
-                //         } 
-                //     }
-                // }
+
         function emailCheck () {
             for (var i = 0; i < data.length; i++) {
                 console.log(data[i].email)
@@ -27,6 +32,38 @@
                     return true;
                 }
             }
+        }
+        function passwordCheck () {
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].pw == password) { 
+                    return true;
+                }
+            }
+        }
+        function login () {
+            let userNumber;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].email == email) {
+                    userNumber = i;
+                    break;
+                }
+            }
+            let emailResult = data[userNumber].email;
+            let passwordResult = data[userNumber].pw;
+            let birthResult = data[userNumber].birth;
+            let userNameResult = data[userNumber].userName;
+            let genderResult = data[userNumber].gender;
+            onScreen = 1;
+            let isLogin = true;
+            dispatch('LoginProps', {
+                onScreen,
+                isLogin,
+                emailResult,
+                passwordResult,
+                birthResult,
+                userNameResult,
+                genderResult
+            });
         }
     }
 </script>

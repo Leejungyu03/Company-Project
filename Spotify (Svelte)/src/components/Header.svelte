@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    export let user;
 
     const dispatch = createEventDispatcher();
 
@@ -8,13 +9,20 @@
     function main () {
         onScreen = 1;
     }
-    function login() {
+    function register () {
         onScreen = 2;
     }
-    function register () {
+    function login() {
         onScreen = 3;
     }
-
+    function logout () {
+        alert("로그아웃 되었습니다.");
+        user.isLogin = false;
+        onScreen = 1;
+    }
+    function mypage() {
+        onScreen = 4;
+    }
 
     $: (() => {
         dispatch('HeaderProps', {
@@ -33,8 +41,14 @@
                 <li>지원</li>
                 <li>다운로드하기</li>
                 <li class="line">|</li>
-                <li on:click={login}>가입하기</li>
-                <li on:click={register}>로그인하기</li>
+                {#if user.isLogin}
+                    <li class="line">{user.userName}님 환영합니다</li>
+                    <li on:click={mypage}>마이페이지</li>
+                    <li on:click={logout}>로그아웃</li>
+                {:else }
+                    <li on:click={register}>가입하기</li>
+                    <li on:click={login}>로그인하기</li>
+                {/if}
             </ul>
         </nav>
     </div>
