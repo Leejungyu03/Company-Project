@@ -6,7 +6,7 @@
 	import Mypage from './components/Mypage.svelte';
 	import Footer from "./components/Footer.svelte";
 	
-	let onScreen = '4';
+	let onScreen = '1';
 	let isLogin = false;
 	let user = {};
 

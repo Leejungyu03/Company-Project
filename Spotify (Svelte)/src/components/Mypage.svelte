@@ -23,7 +23,7 @@
                 )
             }
         }
-        console.log(data)
+        alert("수정 완료되었습니다")
     }
 </script>
 
