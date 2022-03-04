@@ -53,6 +53,7 @@
             let birthResult = data[userNumber].birth;
             let userNameResult = data[userNumber].userName;
             let genderResult = data[userNumber].gender;
+            alert("로그인 되었습니다.")
             onScreen = 1;
             let isLogin = true;
             dispatch('LoginProps', {

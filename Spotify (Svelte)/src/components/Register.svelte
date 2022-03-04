@@ -85,6 +85,7 @@
                     gender : gender,
                 }
             )
+            alert("가입 완료되었습니다")
             clear();
 
         }
