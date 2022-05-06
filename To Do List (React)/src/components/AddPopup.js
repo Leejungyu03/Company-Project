@@ -1,27 +1,26 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import React from 'react';
+import DatePicker from "react-datepicker";
 
-const AddPopup = ({ title, content, startDate, endDate, image, onChange, onCreate }) => {
-    var [img, setImg] = useState(null);
-    let today = new Date();
-    let year = today.getFullYear(); // 년도
-    let month = today.getMonth() + 1;  // 월
-    let date = today.getDate();  // 날짜
-    let todayValue = year + "-0" + month + "-" + date; // xxxx-xx-xx
+const AddPopup = ({inputs, onChange, startDatechange,  endDatechange, onCreate }) => {
+    const imgRef = useRef()
+    const imgFileRef = useRef()
+
     // 그림 미리보기
-    function view (e) {
+    const view = (e) => {
         let basicImg = e.target.parentElement.children[3];
         basicImg.style.display = 'none'
-        let img = e.target.parentElement.children[2].files[0];
-        img = URL.createObjectURL(img);
-        setImg(img);
+        const imgUrl = URL.createObjectURL(imgFileRef.current.files[0]);
+        imgRef.current.src = imgUrl
     }
+
     return (
         <div className='popup'>
             <div className='popup-head'>
                 <span>Add The List</span>
                 <img 
-                    src='./images/save_btn.png' 
+                    src='./images/save_btn.png'
+                    alt="추가 버튼"
                     className='btn-save'
                     onClick={onCreate}
                 ></img>
@@ -35,7 +34,7 @@ const AddPopup = ({ title, content, startDate, endDate, image, onChange, onCreat
                         className='title-text form-control' 
                         name='title' 
                         placeholder="제목"
-                        value={title}
+                        value={inputs.title}
                         onChange={onChange}
                     ></input>
                 </div>
@@ -47,7 +46,7 @@ const AddPopup = ({ title, content, startDate, endDate, image, onChange, onCreat
                         name="content"
                         placeholder="내용"
                         onChange={onChange}
-                        value={content}
+                        value={inputs.content}
                     ></textarea>
                 </div>
                 {/* 날짜 */}
@@ -56,36 +55,35 @@ const AddPopup = ({ title, content, startDate, endDate, image, onChange, onCreat
                     <span className='popup-text'>~</span> 
                     <span className='popup-text'>End Date</span> 
                     <div className='d-flex'>
-                        <input
-                            type='date'
-                            name='startDate'
+                        <DatePicker
+                            value={inputs.startDate} 
                             className='date-start-text form-control'
-                            onChange={onChange}
-                            value={startDate}
-                            min={todayValue}
-                        ></input>
-                        <input
-                            type='date'
-                            name='endDate'
+                            dateFormat="yyyy년 MM월 dd일"
+                            minDate={new Date()}
+                            onSelect={startDatechange}
+                        />
+                        <DatePicker
+                            value={inputs.endDate} 
                             className='date-end-text form-control'
-                            onChange={onChange}
-                            value={endDate}
-                            min={todayValue}
-                        ></input>
+                            dateFormat="yyyy년 MM월 dd일"
+                            minDate={new Date()}
+                            onSelect={endDatechange}
+                        />
                     </div>
                 </div>
                 {/* 이미지 업로드 */}
                 <div className='imageLoad'>
-                    <label for="inputFile"><img src="./images/file.png"></img></label>
+                    <label for="inputFile"><img src="./images/file.png" alt="파일 버튼"></img></label>
                     <img onClick={(e) => view(e)} src="./images/preview.png" className="previewBtn"></img>
                     <input 
                         type='file'
                         name='image'
                         id="inputFile"
                         onChange={onChange}
+                        ref={imgFileRef}
                     ></input>
-                    <img src="./images/image.png" className="image"></img>
-                    <img src={img} className='previewImg'></img>
+                    <img src="./images/image.png" className="image" alt="기본 이미지"></img>
+                    <img className='previewImg' ref={imgRef} alt="이미지 미리보기"></img>
                 </div>
             </div>
         </div>
