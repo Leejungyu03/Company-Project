@@ -1,12 +1,13 @@
 import { useState } from "react"
 import Header from "./components/Header"
-import AddPopup from "./components/AddPopup"
 import MainText from "./components/MainText"
 import './css/header.css'
 import './css/MainText.css'
 import './css/AddPopup.css'
 import './css/ModifyPopup.css'
 import "react-datepicker/dist/react-datepicker.css"
+import UserContainer from "./containers/UserContainer"
+import UserFormConatiner from "./containers/UserFormContainer"
 
 const App = () => {
   const [inputs, setInputs] = useState({
@@ -84,14 +85,16 @@ const App = () => {
   return (
     <div id="wrap">
       <Header />
-      <AddPopup 
+      <UserContainer />
+      <UserFormConatiner />
+      {/* <AddPopup 
         inputs = {inputs}
         onChange={onChange}
         onCreate={onCreate}
         startDatechange={startDatechange}
         endDatechange={endDatechange}
-        />
-      <MainText users={users} />
+        /> */}
+      {/* <MainText users={users} /> */}
     </div>
   );
 }

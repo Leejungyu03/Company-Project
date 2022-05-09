@@ -1,6 +1,7 @@
-const Header = () => {
+const Header = ({ props }) => {
     // 추가 팝업 열기
     function open (e) {
+        console.dir(e.target.parentElement.parentElement.parentElement.children[0])
         e.target.parentElement.parentElement.parentElement.children[0].children[1].style.visibility = 'visible';
         e.target.parentElement.parentElement.parentElement.children[0].children[1].style.opacity = '1';
         e.target.parentElement.children[3].style.visibility = 'visible';
@@ -15,9 +16,9 @@ const Header = () => {
     }
     return (
         <header>
-            <img src='./images/background.png' className="bodyBackground"></img>
+            <img src='./images/background.png' className="bodyBackground" alt="배경"></img>
             <h1>To Do List</h1>
-            <img src='./images/add.png' className='addBtn' onClick={(e) => open(e)}></img>
+            <img src='./images/add.png' className='addBtn' onClick={(e) => open(e)} alt="추가 버튼"></img>
             <div className='background' onClick={(e) => close(e)}></div>
             <span>
                 떠든 사람 <br/>
