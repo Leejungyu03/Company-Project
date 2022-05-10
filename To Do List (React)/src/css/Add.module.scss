@@ -1,0 +1,9 @@
+.swiper {
+  background-color: aliceblue;
+  display: flex;
+  .swiper__swiperSlide {
+    background-color: aqua;
+    width: 200px;
+    display: flex;
+  }
+}

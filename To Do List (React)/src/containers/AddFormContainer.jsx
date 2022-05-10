@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import UserForm from "../components/UserForm";
+import AddForm from "../components/AddForm";
 import { addInputs } from "../redux/actions";
 
 export default function UserFormConatiner() {
@@ -12,5 +12,5 @@ export default function UserFormConatiner() {
     }, [dispatch]
   )
 
-  return <UserForm add={add}/>
+  return <AddForm add={add}/>
 }

@@ -1,8 +1,6 @@
 import ModifyPopup from "./ModifyPopup"
-import User from "./User"
+import Add from "./Add"
 import { useState } from "react"
-import { ImageText } from '../context/ImageText';
-import { Position } from '../context/Position';
 
 
 function MainText({ users }) {
@@ -28,7 +26,7 @@ function MainText({ users }) {
               onMouseDown={(e) => mouseDown(e)} 
               onMouseMove={(e) => mouseMove(e)}>
                 <div className='main-text'>
-                  {users.map(user => (<User user={user} key={user.id}/>))}
+                  {users.map(user => (<Add user={user} key={user.id}/>))}
                 </div>
               </div>
               <ModifyPopup text={{title, content, date, img, position}}/>

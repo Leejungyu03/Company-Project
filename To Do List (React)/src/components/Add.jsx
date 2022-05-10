@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { ImageText } from '../context/ImageText';
-import { Position } from '../context/Position';
+import { Swiper, SwiperSlide } from "swiper/react";
+import CardView from "./CardView";
+import styles from "../css/Add.module.scss"
 
 const User = ({ inputs }) => {
   console.log(inputs)
@@ -30,7 +30,17 @@ const User = ({ inputs }) => {
 
   // }
   return (
-    <div></div>
+    <>
+      <Swiper
+        // spaceBetween={50}
+        // slidesPerView={3}
+        className={styles.swiper}
+      >
+        {inputs.map((input, key) => {
+          return <SwiperSlide key={key} className={styles.swiper__swiperSlide}><CardView input={input}/></SwiperSlide>
+        })}
+      </Swiper>
+    </>
     // <div className='list-box'>
     //   <div className='image-box' onClick={(e) => imageHide(e)}>
     //     <div className='image'><img src={user.image} alt="삽입된 이미지"></img></div>
