@@ -9,8 +9,8 @@
   border-radius: 30px;
   border: 1px solid gray;
   transition: all 1s;
-  /* visibility: hidden; */
-  /* opacity: 0; */
+  visibility: hidden;
+  opacity: 0;
   z-index: 3;
 
   .head {
@@ -97,9 +97,9 @@
       }
 
       .image__basicImage {
-        font-size: 300px;
+        font-size: 260px;
         position: absolute;
-        left: 160px;
+        left: 180px;
         top: 70px;
       }
 

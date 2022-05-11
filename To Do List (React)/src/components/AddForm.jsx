@@ -1,11 +1,11 @@
 import {faDownload, faEye, faFileImage, faImage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Form } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import styles from "../css/AddForm.module.scss"
 
-export default function UserForm ({ add }) {
+export default function UserForm ({ reduxFunction }) {
   const titleRef = useRef();
   const contentRef = useRef();
   const startDateRef = useRef();
@@ -13,12 +13,54 @@ export default function UserForm ({ add }) {
   const imageUrlRef = useRef();
   const prevImageUrlRef = useRef();
   const prevImageRef = useRef();
+  const addPopupPosition = useRef();
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  
+
+
+  useEffect(() => {
+    reduxFunction.addPopupPosition(addPopupPosition.current)
+  })
+
+  const preViewImage = () =>  {
+    if (imageUrlRef.current.files[0] !== undefined && imageUrlRef.current.files[0].value !== "") {
+      prevImageUrlRef.current.parentElement.children[3].style.visibility = "hidden"
+      const imageurl = URL.createObjectURL(imageUrlRef.current.files[0])
+      prevImageUrlRef.current.src = imageurl;
+      prevImageUrlRef.current.style.display = "inline"
+    } else {
+      alert("이미지를 넣어주세요")
+    }
+  }
+
+  const upload = () => {
+    const titleValue = titleRef.current.value;
+    const contentValue = contentRef.current.value;
+    const startDateValue = startDateRef.current.input.value;
+    const endDateValue = endDateRef.current.input.value;
+    let imageurl;
+    if (imageUrlRef.current.files[0] !== undefined && imageUrlRef.current.files[0].value !== "") {
+      imageurl = URL.createObjectURL(imageUrlRef.current.files[0]);
+    } else {
+      imageurl = null
+    }
+    reduxFunction.add(titleValue, contentValue, startDateValue, endDateValue, imageurl);
+    reset();
+  }
+
+  const reset = () => {
+    titleRef.current.value = null;
+    contentRef.current.value = null;
+    setStartDate(null);
+    setEndDate(null);
+    imageUrlRef.current.files[0].value = "";
+    prevImageUrlRef.current.parentElement.children[3].style.visibility = "visible"
+    prevImageUrlRef.current.style.display = "none"
+  }
+
   return (
-    <div className={styles.popup}>
+    <div className={styles.popup} ref={addPopupPosition}>
       <div className={styles.head}>
         <div>
           <FontAwesomeIcon 
@@ -106,41 +148,4 @@ export default function UserForm ({ add }) {
       </div>
     </div>
   );
-
-  function upload() {
-    const titleValue = titleRef.current.value;
-    const contentValue = contentRef.current.value;
-    const startDateValue = startDateRef.current.input.value;
-    const endDateValue = endDateRef.current.input.value;
-    let imageurl;
-    if (imageUrlRef.current.files[0] !== undefined && imageUrlRef.current.files[0].value !== "") {
-      imageurl = URL.createObjectURL(imageUrlRef.current.files[0]);
-    } else {
-      imageurl = null
-    }
-    add(titleValue, contentValue, startDateValue, endDateValue, imageurl);
-    reset();
-
-  }
-
-  function preViewImage() {
-    if (imageUrlRef.current.files[0] !== undefined && imageUrlRef.current.files[0].value !== "") {
-      prevImageUrlRef.current.parentElement.children[3].style.visibility = "hidden"
-      const imageurl = URL.createObjectURL(imageUrlRef.current.files[0])
-      prevImageUrlRef.current.src = imageurl;
-      prevImageUrlRef.current.style.display = "inline"
-    } else {
-      alert("이미지를 넣어주세요")
-    }
-  }
-
-  function reset() {
-    titleRef.current.value = null;
-    contentRef.current.value = null;
-    setStartDate(null);
-    setEndDate(null);
-    imageUrlRef.current.files[0].value = "";
-    prevImageUrlRef.current.parentElement.children[3].style.visibility = "visible"
-    prevImageUrlRef.current.style.display = "none"
-  }
 }

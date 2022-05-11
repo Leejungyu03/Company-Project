@@ -1,32 +1,47 @@
-const Header = ({ props }) => {
-    // 추가 팝업 열기
-    function open (e) {
-        console.dir(e.target.parentElement.parentElement.parentElement.children[0])
-        e.target.parentElement.parentElement.parentElement.children[0].children[1].style.visibility = 'visible';
-        e.target.parentElement.parentElement.parentElement.children[0].children[1].style.opacity = '1';
-        e.target.parentElement.children[3].style.visibility = 'visible';
-        e.target.parentElement.children[3].style.opacity = '1';
-    }
-    // 추가 팝업 닫기
-    function close (e) {
-        e.target.parentElement.parentElement.children[1].style.visibility = 'hidden';
-        e.target.parentElement.parentElement.children[1].style.opacity = '0';
-        e.target.style.visibility = 'hidden';
-        e.target.style.opacity = '0';
-    }
-    return (
-        <header>
-            <img src='./images/background.png' className="bodyBackground" alt="배경"></img>
-            <h1>To Do List</h1>
-            <img src='./images/add.png' className='addBtn' onClick={(e) => open(e)} alt="추가 버튼"></img>
-            <div className='background' onClick={(e) => close(e)}></div>
-            <span>
-                떠든 사람 <br/>
-                김ㅁㅁ  <br/>
-                이ㅁㅁ
-            </span>
-        </header>
-    );
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
+import styles from "../css/header.module.scss"
+
+const Header = ({ positions }) => {
+	const blurBackgroundRef = useRef();
+
+	const addPopupPosition = positions.addPopup;
+
+	const openAddPopup = () => {
+		addPopupPosition.style.visibility = "visible";
+    addPopupPosition.style.opacity = "1";
+		blurBackgroundRef.current.style.visibility = "visible";
+		blurBackgroundRef.current.style.opacity = "1";
+	}
+
+	const closeAddPopup = () => {
+		addPopupPosition.style.visibility = "hidden";
+    addPopupPosition.style.opacity = "0";
+		blurBackgroundRef.current.style.visibility = "hidden";
+		blurBackgroundRef.current.style.opacity = "0";
+	}
+
+  return (
+		<header>
+      <div className={styles.notice}>
+        떠든 사람 <br/>
+        김ㅁㅁ  <br/>
+        이ㅁㅁ
+      </div>
+			<h1>To Do List</h1>
+			<FontAwesomeIcon
+				icon={faPenToSquare}
+        className={styles.openAddPopupBtn}
+        onClick={openAddPopup}
+			/>
+			<div 
+				className={styles.blurBackground}
+				onClick={closeAddPopup}
+				ref={blurBackgroundRef}
+			></div>
+		</header>
+	);
 }
 
 export default Header;
