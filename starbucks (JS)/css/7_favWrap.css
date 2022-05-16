@@ -1,0 +1,92 @@
+.favWrap {height: 800px;
+    background-image: url(/starbucks/image/7_favWrap/favWrap_background.jpg);
+    background-attachment: fixed;
+}
+
+.favWrap .favWrap-text1-move {
+    float: left;
+    padding-top: 150px;
+    position: absolute;
+    padding-left: 90px;
+}
+
+.favWrap .favWrap-text2-move {
+    float: left;
+    padding-top: 420px;
+    position: absolute;
+}
+
+.favWrap .reserve-visual-btn {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    line-height: 10px;
+    color: white;
+    border: 3px solid white;
+    background-color: transparent;
+}
+
+.favWrap .reserve-visual-btn:hover {
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+}
+
+.favWrap .reserve-visual-btn-move {
+    padding-left: 490px;
+    padding-top: 800px;
+}
+
+.favWrap .favWrap-img-move {
+    padding-top: 100px;
+}
+
+.favWrap .flash-fast{
+    animation:flash 2s infinite;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+} 
+
+.favWrap .flash-slow{
+    animation:flash 2s infinite;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+} 
+
+
+.favWrap .left-move-fast {
+    animation-name: left;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.favWrap .left-move-slow {
+    animation-name: left;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flash{ 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+
+@keyframes left {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 400px;
+    }
+}

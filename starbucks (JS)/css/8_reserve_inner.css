@@ -1,0 +1,54 @@
+.reserve-inner {height: 400px;
+    background-image: url(/starbucks/image/8_reserve_inner/reserve-background.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.reserve-inner .reserve-text-move {
+    padding-left: 500px;
+    padding-top: 100px;
+}
+
+.reserve-inner .reserve-btn {
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    line-height: 10px;
+    color: black;
+    border: 3px solid black;
+    background-color: transparent;
+}
+
+.reserve-inner .reserve-btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+.reserve-inner .reserve-btn-move {
+    padding-left: 750px;
+    padding-top: 30px;
+}
+
+.reserve-inner .reserve-image-move {
+    padding-left: 230px;
+    padding-top: 20px;
+    opacity: 0;
+}
+
+.reserve-inner .flash{
+    animation:flash 2s infinite;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+} 
+
+@keyframes flash{ 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 

@@ -1,0 +1,61 @@
+.new-reward {
+    height: 240px;
+    background-color: rgb(30, 57, 50);
+}
+
+.new-reward .reward-text {
+    color: white;
+    font-size: 18px;
+}
+
+.new-reward .text1-gather {
+    width: 1020px;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(66, 100, 16, 0.856);
+}
+
+.new-reward .signUp-btn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(0, 112, 74);
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.new-reward .login-btn {
+    width: 90px;
+    height: 50px;
+    background-color: rgb(30, 57, 50);
+    color: white;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.new-reward .btn-move {
+    padding-top: 40px;
+    padding-left: 220px;
+}
+
+.new-reward .gift-btn {
+    width: 210px;
+    height: 50px;
+    background-color: rgb(30, 57, 50);
+    color: white;
+    font-size: 18px;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+.new-reward .gift-btn-move {
+    padding-left: 30px;
+    padding-top: 22px;
+}
+
+.new-reward .reward-logo-move {
+    padding-left: 350px;
+    line-height: 200px;
+}
+

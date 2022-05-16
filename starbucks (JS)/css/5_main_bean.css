@@ -1,0 +1,84 @@
+.main-bean {
+    height: 572px;
+    background-image:
+    url(/starbucks/image/5_main_bean/bean_background.png);
+}
+.main-bean .bean-move {
+    padding-top: 50px;
+}
+
+.main-bean .bean-right-move {
+    padding-top: 120px;
+}
+
+.main-bean .bean-btn-move {
+    padding-top: 30px;
+}
+
+.main-bean .bean-btn {
+    width: 130px;
+    height: 40px;
+    color: black;
+    border: 2px solid black;
+    font-size: 17px;
+    border-radius: 8px;
+    line-height: 10px;
+    background-color: transparent;
+}
+
+.main-bean .bean-btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+.main-bean .flash{
+    animation:flash 2s infinite;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+} 
+
+.main-bean .left-move {
+    animation-name: left;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.main-bean .right-move {
+    animation-name: right;
+    animation-duration: 3.6s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flash{ 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} 
+
+@keyframes left {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 25%;
+    }
+}
+
+@keyframes right {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: 35%;
+    }
+}
