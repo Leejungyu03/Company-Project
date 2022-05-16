@@ -15,7 +15,6 @@ const ModifyPopup = (text) => {
                     <span>Modify The List</span>
                     <img 
                         src='./images/upload.png' 
-                        alt="업로드 버튼"
                         className='btn-save'
                         onClick={(e) => modifyUpload(e ,position)}
                     ></img>
@@ -89,7 +88,6 @@ function close (e) {
 }
 // 수정 값 업로드
 function modifyUpload (e, position) {
-    console.dir(position)
     let title = e.target.parentElement.parentElement.children[1].children[0].children[1].value;
     let content = e.target.parentElement.parentElement.children[1].children[1].children[1].value;
     let startDate = e.target.parentElement.parentElement.children[1].children[2].children[3].children[0].value;

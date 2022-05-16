@@ -1,0 +1,121 @@
+/* 수정 팝업 */
+.modifyPopup {
+    width: 600px;
+    height: 840px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(223, 219, 219);
+    border-radius: 30px;
+    border: 1px solid gray;
+    transition: all 1s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+}
+/* 수정 팝업 상단 */
+.modifyPopup .popup-head {
+    height: 70px;
+    border-bottom: 1px solid gray;
+}
+/* 수정 팝업 상단 <Modify The List> */
+.modifyPopup .popup-head span {
+    position: relative;
+    left: 36%;
+    line-height: 70px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: fantasy;
+}
+/* 수정 팝업 업로드 버튼 */
+.modifyPopup .popup-head .btn-save {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 370px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.modifyPopup .popup-head .btn-save:hover {
+    top: -3px;
+}
+/* (제목 내용 날짜 진행)위치 */
+.modifyPopup .popup-body .popup-title, .popup-content, .popup-date, .popup-progress{
+    margin-top: 10px;
+    text-align: center;
+}
+/* (제목 내용 날짜 진행) 폰트 */
+.modifyPopup .popup-body .popup-text {
+    font-size: 30px;
+    font-weight: 600;
+}
+/* 제목 */
+.modifyPopup .popup-body .popup-title .title-text {
+    width: 80%;
+    height: 40px;
+    position: relative;
+    left: 10%;
+}
+/* 내용 */
+.modifyPopup .popup-body .popup-content .content-text {
+    width: 90%;
+    height: 160px;
+    position: relative;
+    left: 5%;
+}
+/* 날짜 */
+.modifyPopup .popup-body .popup-date .popup-text {
+    margin: 0 40px 0 35px;
+}
+.modifyPopup .popup-body .popup-date .date-start-text, .date-end-text {
+    width: 75%;
+    margin: 0 30px 0 30px;
+}
+/* 이미지 업로드 */
+.modifyPopup .popup-body .imageLoad {
+    width: 100%;
+    height: 330px;
+}
+/* 파일 선택 버튼 */
+.modifyPopup .popup-body .imageLoad label img {
+    width: 50px;
+    position: relative;
+    left: 280px;
+    top: 25px;
+    cursor: pointer;
+}
+/* input file 원본 숨기기 */
+.modifyPopup .popup-body .imageLoad input[type=file]{
+    visibility: hidden;
+}
+/* 미리보기 버튼 */
+.modifyPopup .popup-body .imageLoad .previewBtn {
+    width: 35px;
+    position: relative;
+    left: 470px;
+    top: 20px;
+    cursor: pointer;
+}
+/* 미리보기 이미지 */
+.modifyPopup .popup-body .imageLoad .previewImg {
+    width: 300px;
+    max-height: 230px;
+    position: relative;
+    left: 160px;
+    top: 40px;
+    border-radius: 20px;
+}
+/* 수정 팝업 배경화면 */
+.modifyBackground {
+    width: 100%;
+    height: 1009px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    transition: all 1s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+}

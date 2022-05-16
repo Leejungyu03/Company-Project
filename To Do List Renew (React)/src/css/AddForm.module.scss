@@ -1,0 +1,126 @@
+.popup {
+  width: 600px;
+  height: 840px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(223, 219, 219);
+  border-radius: 30px;
+  border: 1px solid gray;
+  transition: all 1s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+
+  .head {
+    height: 70px;
+    border-bottom: 2px solid gray;
+    text-align: center;
+    position: relative;
+
+    i {
+      width: 100px;
+    }
+
+    .head__text {
+      line-height: 70px;
+      font-size: 30px;
+      font-family: fantasy;
+    }
+
+    .saveBtn {
+      position: absolute;
+      font-size: 40px;
+      right: 30px;
+      top: 10px;
+      cursor: pointer;
+
+      &:hover {
+        top: 13px;
+      }
+    }
+  }
+
+  .body {
+
+    .body__title,
+    .body__content,
+    .body__date {
+      margin-top: 20px;
+      text-align: center;
+
+      .body__text {
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      .title__form {
+        width: 80%;
+        position: relative;
+        padding: 10px;
+        left: 10%;
+      }
+
+      .content__form {
+        width: 90%;
+        height: 160px;
+        position: relative;
+        left: 5%;
+      }
+
+      .date__text {
+        padding: 0 50px;
+        font-size: 24px;
+      }
+
+    }
+    .body__image {
+      width: 100%;
+      position: relative;
+      text-align: center;
+
+      .image__upload {
+        font-size: 60px;
+        position: absolute;
+        left: 40px;
+        top: 150px;
+        cursor: pointer;
+      }
+
+      .image__previewBtn {
+        font-size: 50px;
+        position: absolute;
+        right: 30px;
+        top: 150px;
+        cursor: pointer;
+      }
+
+      .image__basicImage {
+        font-size: 260px;
+        position: absolute;
+        left: 180px;
+        top: 70px;
+      }
+
+      .image__previewImage {
+        width: 340px;
+        max-height: 260px;
+        margin-top: 40px;
+        border-radius: 20px;
+        display: none;
+      }
+
+      #inputFile {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+
+// .popup .popup-body .popup-date .date-start-text,
+// .date-end-text {
+//   width: 75%;
+//   margin: 0 30px 0 30px;
+// }
